@@ -9,3 +9,93 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+:root { 
+    --color-primario: #692aa3 ; 
+    --color-secundario: #5fc2c2 ; 
+    --color-accent: #e0e8eb ; 
+    --color-fondo: #000000 ; 
+    --color-texto: #ddebec ; 
+} 
+
+body { 
+    background: linear-gradient(45deg, var(--color-fondo), #438aa8); 
+    min-height: 100vh; 
+    margin: 0; 
+    padding: 5rem; 
+    font-family: 'Arial', sans-serif; 
+    color: var(--color-texto); 
+} 
+
+h1 { 
+    color: var(--color-secundario); 
+    text-align: center; 
+    margin-bottom: 7rem; 
+    font-size: 7em; 
+    text-shadow: 20px 2px 4px rgba(35, 37, 37, 0.3); 
+} 
+
+input { 
+    width: 100%; 
+    padding: 1rem; 
+    margin-bottom: 1.5rem; 
+    border: 1px solid var(--color-secundario); 
+    border-radius: 8px; 
+    background: rgba(92, 131, 116, 0.1); 
+    color: var(--color-texto); 
+    font-size: 1.1rem; 
+    transition: all 0.3s ease; 
+} 
+
+.tarea-contenedor {
+     display: flex; 
+     justify-content: space-between; 
+     align-items: center; 
+     padding: 1rem; 
+     background: rgba(44, 83, 100, 0.3); 
+     border-bottom: 1px solid var(--color-secundario); 
+     transition: all 0.3s ease; 
+} 
+
+.tarea-contenedor:hover .boton-eliminar { 
+    opacity: 1; 
+    color: var(--color-accent); 
+} 
+
+.boton-eliminar { 
+    opacity: 0; 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1.2rem; 
+    color: var(--color-secundario); 
+    transition: all 0.3s ease; 
+} 
+
+.mensaje-vacio { 
+    text-align: center; 
+    padding: 1rem; 
+    color: var(--color-accent); 
+    font-style: 'Pirata One', cursive; 
+    color: var(--color-secundario); 
+    text-align: center; 
+    margin-bottom: 2rem; 
+    font-size: 1.5em; 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3); 
+} 
+
+.contenedor-todo { 
+    font-family: 'Ubuntu', sans-serif; 
+} 
+
+h1 { 
+    font-family: 'Pirata One', cursive; 
+} 
+
+@keyframes aparecer { 
+    0% { opacity: 0; transform: translateY(-2900px); } 
+    100% { opacity: 1; transform: translateY(0); } 
+} 
+
+.tarea-contenedor { 
+    animation: aparecer 0.5s ease; 
+}
